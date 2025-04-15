@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem pessoal nas redes sociais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Real<span>Social</span></div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#temas">Temas</a></li>
+                <li><a href="#atividades">Atividades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>Imagem Pessoal nas Redes</h1>
+                <h2>Entre o Real, o Filtro e o Like</h2>
+                <p class="tagline">Você é quem você posta... ou quem gostaria de ser?</p>
+                <button class="cta-button">Bem vindo a Oficina !</button>
+            </div>
+            <div class="social-icons">
+                <div class="icon-card">
+                    <i class="fas fa-user"></i>
+                    <span>Real</span>
+                </div>
+                <div class="icon-card">
+                    <i class="fas fa-star"></i>
+                    <span>Ideal</span>
+                </div>
+                <div class="icon-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Digital</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="temas" class="topics">
+            <h2>Temas da Oficina</h2>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <i class="fas fa-theater-masks"></i>
+                    <h3>Vida de Vitrine</h3>
+                    <p>A pressão de parecer perfeito nas redes sociais</p>
+                </div>
+                <div class="topic-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>A Moeda dos Likes</h3>
+                    <p>Quando curtidas definem nosso valor</p>
+                </div>
+                <div class="topic-card">
+                    <i class="fas fa-camera-retro"></i>
+                    <h3>Filtros da Vida Real</h3>
+                    <p>A busca pela perfeição digital</p>
+                </div>
+                <div class="topic-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Humanos ou Avatares?</h3>
+                    <p>Os limites entre real e virtual</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="atividades" class="activities">
+            <h2>Atividade Prática</h2>
+            <div class="activity-container">
+                <div class="activity-card">
+                    <h3>Montando o Feed Perfeito</h3>
+                    <p>Observe os perfis a seguir e reflita: que imagem eles estão transmitindo? O que conseguimos perceber sobre a pessoa apenas pelo que é mostrado?</p>
+                    <button class="secondary-button">Ver perfis</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Você Vale Mais do Que Seu Feed</h2>
+            <p>Descubra como ser autêntico em um mundo digital</p>
+            <button class="cta-button">Obrigado pela atenção!</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>desenvolvido por:</h4>
+                <p>Emily Silva</p>
+                <p>Lídia Tapajós</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Projeto educativo</h4>
+                <p>Oficina sobre identidade digital</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 RealSocial.</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            const button = e.target;
+            const rect = button.getBoundingClientRect();
+            
+            // Create hearts
+            for (let i = 0; i < 5; i++) {
+                createFloatingElement('❤️', rect);
+            }
+            
+            // Create likes
+            for (let i = 0; i < 5; i++) {
+                createFloatingElement('❤️', rect);
+            }
+        });
+
+        function createFloatingElement(emoji, rect) {
+            const element = document.createElement('div');
+            element.innerHTML = emoji;
+            element.style.position = 'fixed';
+            element.style.left = rect.left + rect.width/2 + 'px';
+            element.style.top = rect.top + 'px';
+            element.style.fontSize = '20px';
+            element.style.pointerEvents = 'none';
+            element.style.animation = 'floatUp 2s ease-out forwards';
+            document.body.appendChild(element);
+            
+            // Remove element after animation
+            setTimeout(() => {
+                element.remove();
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
