@@ -38,7 +38,11 @@ body {
 }
 
 .logo span {
-    color: #e84393;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-links {
@@ -55,7 +59,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #e84393;
+    color: #bc1888;
 }
 
 /* Hero section */
@@ -84,7 +88,11 @@ body {
 
 .hero h2 {
     font-size: 2rem;
-    color: #e84393;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 2rem;
 }
 
@@ -155,7 +163,7 @@ body {
 
 .icon-card i {
     font-size: 2rem;
-    color: #e84393;
+    color: #bc1888;
 }
 
 .icon-card span {
@@ -199,7 +207,7 @@ body {
 
 .topic-card i {
     font-size: 2.5rem;
-    color: #e84393;
+    color: #bc1888;
     margin-bottom: 1rem;
 }
 
@@ -240,7 +248,7 @@ body {
 /* CTA section */
 .cta-section {
     padding: 5rem 5%;
-    background: linear-gradient(135deg, #e84393 0%, #fd79a8 100%);
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
     text-align: center;
     color: white;
 }
@@ -252,7 +260,7 @@ body {
 
 /* Buttons */
 .cta-button {
-    background: #e84393;
+    background: #3897f0;
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -270,8 +278,8 @@ body {
 
 .secondary-button {
     background: transparent;
-    color: #e84393;
-    border: 2px solid #e84393;
+    color: #bc1888;
+    border: 2px solid #bc1888;
     padding: 0.8rem 1.5rem;
     border-radius: 50px;
     font-size: 1rem;
@@ -281,7 +289,7 @@ body {
 }
 
 .secondary-button:hover {
-    background: #e84393;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
     color: white;
 }
 
@@ -317,7 +325,7 @@ body {
 }
 
 .social-links a:hover {
-    color: #e84393;
+    color: #bc1888;
 }
 
 .footer-bottom {
