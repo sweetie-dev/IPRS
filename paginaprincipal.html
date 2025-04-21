@@ -17,12 +17,6 @@
     <header class="header">
         <nav class="navbar">
             <div class="logo">Real<span>Social</span></div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#temas">Temas</a></li>
-                <li><a href="#atividades">Atividades</a></li>
-            </ul>
         </nav>
     </header>
 
@@ -116,12 +110,13 @@
     </footer>
     <!--JAVASCRIPT-->
     <script>
-        /*CORAÇÃO NO BOTÃO INICIAL*/
+        /*MENSAGEM NO INICIO*/
             const bemvindo = document.getElementById('bemvindo');
         
             setTimeout(() => {
               bemvindo.classList.add('hide');
             }, 4000);
+            
         /*CORAÇÃO NO BOTÃO INICIAL*/
         document.querySelector('.cta-button').addEventListener('click', function(e) {
             const button = e.target;

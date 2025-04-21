@@ -18,7 +18,7 @@ body {
     display: inline-flex;
     align-items: center;
     padding: 10px 20px;
-    background-color: #0095f6;
+    background: linear-gradient(45deg, #d468b2,#f09433, #e6683c,#dc2743);
     color: white;
     text-decoration: none;
     border-radius: 4px;
@@ -27,7 +27,7 @@ body {
 }
 
 .back-button a:hover {
-    background-color: #0081d6;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #d468b2);
 }
 
 .back-button i {
@@ -40,9 +40,9 @@ body {
 }
 
 .profile-card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #e1ac66,#ad56cc, #e6683c,#de1634);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(3, 3, 3, 0.1);
     margin-bottom: 30px;
     padding: 20px;
 }
@@ -62,9 +62,9 @@ body {
 
 .profile-header a {
     text-decoration: none;
-    color: #262626;
+    color: #fdfdfd;
 }
 
 .profile-header a:hover {
-    color: #0095f6;
+    color: #080808;
 } 
