@@ -10,6 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="bemvindo" id="bemvindo">
+        <span class="toast">📩</span>
+        <span><strong>Bem-vindo(a)!</strong> Espero que goste da nossa Oficina 😄</span>
+      </div>
     <header class="header">
         <nav class="navbar">
             <div class="logo">Real<span>Social</span></div>
@@ -81,7 +85,7 @@
                 <div class="activity-card">
                     <h3>Montando o Feed Perfeito</h3>
                     <p>Observe os perfis a seguir e reflita: que imagem eles estão transmitindo? O que conseguimos perceber sobre a pessoa apenas pelo que é mostrado?</p>
-                    <button class="secondary-button">Ver perfis</button>
+                    <a href="perfis.html"><button class="secondary-button">Ver perfis</button></a>
                 </div>
             </div>
         </section>
@@ -89,7 +93,7 @@
         <section class="cta-section">
             <h2>Você Vale Mais do Que Seu Feed</h2>
             <p>Descubra como ser autêntico em um mundo digital</p>
-            <button class="cta-button">Obrigado pela atenção!</button>
+           <button class="cta-button">Obrigado pela atenção!</button>
         </section>
     </main>
 
@@ -105,21 +109,20 @@
                 <h4>Projeto educativo</h4>
                 <p>Oficina sobre identidade digital</p>
             </div>
-            
-            <div class="footer-section">
-                <h4>Redes Sociais</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 RealSocial.</p>
         </div>
     </footer>
+    <!--JAVASCRIPT-->
     <script>
+        /*CORAÇÃO NO BOTÃO INICIAL*/
+            const bemvindo = document.getElementById('bemvindo');
+        
+            setTimeout(() => {
+              bemvindo.classList.add('hide');
+            }, 4000);
+        /*CORAÇÃO NO BOTÃO INICIAL*/
         document.querySelector('.cta-button').addEventListener('click', function(e) {
             const button = e.target;
             const rect = button.getBoundingClientRect();

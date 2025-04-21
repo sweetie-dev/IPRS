@@ -102,6 +102,48 @@ body {
     margin-bottom: 2rem;
 }
 
+/*Bem VINDO*/
+
+.bemvindo {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideIn 0.5s ease forwards;
+    z-index: 9999;
+  }
+
+  .bemvindo.hide {
+    animation: slideOut 0.5s ease forwards;
+  }
+
+  .toast {
+    font-size: 20px;
+  }
+
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideOut {
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+
 /* Social Icons */
 .social-icons {
     display: flex;
@@ -335,7 +377,7 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive design */
+/* ------------------------RESPOSIVIDADE-------------------------------*/
 @media (max-width: 1024px) {
     .social-icons {
         gap: 1.5rem;
