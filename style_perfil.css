@@ -12,6 +12,27 @@ body {
 
 .back-button {
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.back-button h2 {
+    font-size: 2.5em;
+    background: linear-gradient(45deg, #d07d7d, #ce32ea, #d55425, #ec0528);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+}
+
+.back-button p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
 }
 
 .back-button a {
