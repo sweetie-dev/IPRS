@@ -46,23 +46,6 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #2d3436;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #bc1888;
-}
-
 /* Hero section */
 .hero {
     padding: 8rem 5% 4rem;
@@ -104,7 +87,6 @@ body {
 }
 
 /*Bem VINDO*/
-
 .bemvindo {
     position: fixed;
     top: 20px;
@@ -121,29 +103,40 @@ body {
     transform: translateY(-20px);
     animation: slideIn 0.5s ease forwards;
     z-index: 9999;
-  }
+}
 
-  .bemvindo.hide {
+.bemvindo.hide {
     animation: slideOut 0.5s ease forwards;
-  }
+}
 
-  .toast {
+.toast {
     font-size: 20px;
-  }
+}
 
-  @keyframes slideIn {
+@keyframes slideIn {
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
+}
 
-  @keyframes slideOut {
+@keyframes slideOut {
     to {
-      opacity: 0;
-      transform: translateY(-20px);
+        opacity: 0;
+        transform: translateY(-20px);
     }
-  }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
 
 /* Social Icons */
 .social-icons {
@@ -167,7 +160,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     gap: 0.8rem;
-    transition: transform 0.3s ease, width 0.3s ease;
+    transition: transform 0.3s ease;
     width: 250px;
     position: relative;
     overflow: hidden;
@@ -201,7 +194,7 @@ body {
 }
 
 .icon-card:hover {
-    transform: translateY(-10px) scaleX(1.2);
+    transform: translateY(-10px);
 }
 
 .icon-card i {
@@ -291,7 +284,7 @@ body {
 /* CTA section */
 .cta-section {
     padding: 5rem 5%;
-    background:  linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
     text-align: center;
 }
 
@@ -299,56 +292,6 @@ body {
     font-size: 2.5rem;
     color: #ffffff;
     margin-bottom: 1rem;
-}
-
-/* Feedback Form Styles */
-.feedback-form {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.feedback-form h3 {
-    color: #2d3436;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-}
-
-.feedback-form textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    resize: vertical;
-    margin-bottom: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.feedback-form textarea:focus {
-    outline: none;
-    border-color: #bc1888;
-}
-
-.submit-feedback {
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.submit-feedback:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(188, 24, 136, 0.3);
 }
 
 /* Buttons */
@@ -406,21 +349,6 @@ body {
     font-size: 1.2rem;
 }
 
-.social-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.social-links a {
-    color: white;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #bc1888;
-}
-
 .footer-bottom {
     text-align: center;
     margin-top: 3rem;
@@ -428,7 +356,7 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* ------------------------RESPOSIVIDADE-------------------------------*/
+/* Responsive styles */
 @media (max-width: 1024px) {
     .social-icons {
         gap: 1.5rem;
@@ -444,7 +372,7 @@ body {
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
-        padding: 02rem;
+        padding: 2rem;
     }
     
     .icon-card {
@@ -464,29 +392,5 @@ body {
     
     .hero h2 {
         font-size: 1.5rem;
-    }
-    
-    .nav-links {
-        display: none;
-    }
-}
-
-@keyframes floatUp {
-    0% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-100px) scale(0.5);
-        opacity: 0;
-    }
-}
-
-@keyframes moveX {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(var(--final-x));
     }
 }
